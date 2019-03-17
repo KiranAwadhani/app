@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<ons-splitter>
+  <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+    <ons-page>
+      <ons-list>
+        <ons-list-item onclick="fn.load('home.html')" tappable>
+          Home
+        </ons-list-item>
+        <hr>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          Settings
+        </ons-list-item>
+        <hr>
+        <ons-list-item onclick="fn.load('about.html')" tappable>
+          About
+        </ons-list-item>
+        <hr>
+      </ons-list>
+    </ons-page>
+  </ons-splitter-side>
+  <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+</ons-splitter>
+
+<template id="home.html">
+  <ons-page id="home">
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+
+        </ons-toolbar-button>
+      </div>
+      <div class="center"  style="background-image: url('the.jpg');">
+        Main
+      </div>
+      
+    </ons-toolbar>
+         <ons-list-item>
+        	<ons-page>
+  <p style="text-align: right; margin-top: 10px; position: top-right;">
+    <ons-search-input
+      placeholder="Search"
+      onchange="ons.notification.alert('Searched for: ' + this.value)"
+    ></ons-search-input>
+  </p>
+</ons-page>
+</ons-list-item>
+<ons-list-item class="leftt">
+
+      <div>
+        <img class="list-item__thumbnail" src="IMG-20190223-WA0021_2.jpg" onclick="fn.load('about.html')">
+      </div>
+      <div>
+        <span class="list-item__title" onclick="fn.load('about.html')">Cutest kitty</span><span class="list-item__subtitle" onclick="fn.load('about.html')">              <u>Click here</u></span>
+        <p>All about web servers</p>
+      </div>
+    </ons-list-item>
+     <ons-list-item>
+      <div class="leftt" onclick="fn.load('about.html')">
+        <img class="list-item__thumbnail" src="IMG_20170820_122715.jpg">
+      </div>
+      <div>
+        <span class="list-item__title" onclick="fn.load('about.html')">My Apple</span><span class="list-item__subtitle" onclick="fn.load('about.html')">             <u>Click Here</u></span>
+        <p>All about music</p>
+      </div>
+    </ons-list-item>
+    <ons-list-item>
+      <div class="leftt" onclick="fn.load('about.html')">
+        <img class="list-item__thumbnail" src="the.jpg">
+      </div>
+
+      <div>
+
+        <span class="list-item__title" onclick="fn.load('about.html')">Spares</span><span class="list-item__subtitle" onclick="fn.load('about.html')">             <u>Click Here</u></span>
+        <p>All about programming</p>
+      </div>
+    </ons-list-item>
+    <ons-list-item>
+      <div class="leftt" onclick="fn.load('about.html')">
+        <img class="list-item__thumbnail" src="that.jpg">
+      </div>
+      <div>
+        <span class="list-item__title" onclick="fn.load('about.html')">Aspirin</span><span class="list-item__subtitle" onclick="fn.load('about.html')">             <u>Click Here</u></span>
+        <p>All about Food</p>
+      </div>
+    </ons-list-item>
+
+  <ons-fab position="bottom right" onclick="fn.load('settings.html')">
+    <ons-icon icon="md-plus"></ons-icon>
+  </ons-fab>
+
+
+  </ons-page>
+</template>
+
+<template id="settings.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="mian">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="cen">
+        Settings
+      </div>
+    </ons-toolbar>
+    <ons-page>
+  <div style="text-align: center; margin-top: 30px; font-size: 30px; background-image: url('that.jpg'); background-size: 100%; background-repeat: no-repeat;">
+    <form action="/action_page.php" target="_blank" method="GET" style="font-size: 150%;">
+  Username:<br>
+  <input type="text" name="username" placeholder="username" style="color: red">
+  <br>
+  Password:<br>
+  <input type="password" name="password" placeholder="password">
+  <br>
+    <p>
+      <textarea class="texts" rows="0" cols="0" placeholder="Add Link Here" float></textarea>
+    </p>
+   
+  <br>
+  <p style="margin-top: 30px;">
+      <ons-button onclick="login()" onclick="alert('added')"> Add On</ons-button>
+     <ons-toast id="myToast" animation="ascend">
+  Added to about!
+  <button onclick="myToast.hide()" >ok</button>
+</ons-toast>
+  <ons-button onclick="alert('cancelled')">Cancel</ons-button>
+    </p>
+ </form>
+ 
+   
+    
+   </div>
+
+</ons-toast>
+</ons-page>
+  </ons-page>
+</template>
+
+<template id="about.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="center">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="cen"  style="background-image: url('that.jpg');">
+        About
+      </div>
+    </ons-toolbar>
+    <p1><pre>
+    this is the moment
+    <a href="www.google.com">google</a>
+    you get all the info here
+    </pre></p>
+
+    <hr>
+     <p2 style="background-image: url('that.jpg');"><pre>
+    this is the moment
+    <a href="www.chrome.com">chrome</a>
+    you get all the info here
+    </pre></p>
+  <hr>
+   <p3><pre>
+    this is the moment
+    <a href="www.gmail.com">gmail</a>
+    you get all the info here
+    </pre></p>
+  <p>
+      <textarea class="texts" rows="0" cols="0" position="top" placeholder="Add Link Here" float></textarea>
+    </p>
+   
+  <br>
+  <p style="margin-top: 30px;">
+      <ons-button onclick="login()" onclick="alert('added')"> Add On</ons-button>
+     <ons-toast id="myToast" animation="ascend">
+  Added to about!
+  <button onclick="myToast.hide()" >ok</button>
+</ons-toast>
+  <ons-button onclick="alert('cancelled')">Cancel</ons-button>
+    </p>
+  </ons-page>
+</template>
+<script src="app.js"></script>
+</body>
+</html>
